@@ -1,0 +1,30 @@
+.d-none {
+    display: none !important;
+  }
+  
+  .bool.select {
+    background: #4b4bc8 !important;
+    color: white !important;
+  }
+  
+  .grade.select {
+    transform: scale(1.08) !important;
+  }
+  
+  
+  *{
+      box-sizing: border-box;
+      margin:0px;
+      padding:0px;
+      font-family: "Montserrat", sans-serif;
+    }
+  
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 24px;
+}

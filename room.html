@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  async function callApi() {
+    const response = await fetch("https://api.cpfhub.io/api/cpf", {
+        method: "POST",
+        headers: { 
+            "Content-Type": "application/json",
+            "Authorization": "4f65b798c95d56c0782b2d0e4a94b63a7df8d57307e711ca8ca4641a3c67eb5c"
+        },
+        body: JSON.stringify({
+            cpf: "15358147640",
+            birthDate: "12/11/2002"
+        }),
+    });
+    console.log(response)
+  }
+  callApi()
+  console.log('aa', )
+
+                    </script>
+<body>
+  
+</body>
+</html>
